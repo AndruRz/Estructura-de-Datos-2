@@ -1,0 +1,148 @@
+Qué son las Arrow Functions?
+
+Las Arrow Functions (Funciones Flecha) son una forma más corta y mordena de escribir funciones en JavaScript.
+Fueron intrudcidas en ES6 (ECMAScript 2016) y se usan mucho hoy en día porque hacen el código más limpio y fácil de leer.
+Sus caracteristicas principal es que usan el simbolo => (flecha).
+
+
+- Sintaxis Basica
+
+Funcion Regular:
+
+function saludar(nombre){
+    return "Hola " + nombre;
+}
+
+Arrow Function equivalente
+
+const saludar = (nombre) => {
+    return "Hola " + nombre;
+}
+
+Ambas hacen exactamente lo mismo, pero la Arrow Function es más corta.
+
+- Ejemplo explicado paso a paso (Par o Impar)
+
+Vamos con el ejemplo que te pidieron:
+una funcion que reciba un numero y diga si es par o impar
+
+Arrow Function
+
+const esParOImpar = (numero) => {
+    if (numero % 2 === 0) {
+        console.log("El numero es par");
+    } else {
+        console.log("El numero es impar");
+    }
+}
+
+Como funciona?
+
+1. Const esParOImpar
+Creamos una constante que guarda la funcion
+
+2. (numero)
+Es el parametro que recibe la funcion (el numero a evaluar)
+
+3. =>
+Indica que es una Arrow Function
+
+4. numero % 2
+- El operador % devuelve el residuo de uan division
+- Si el residuo es 0, el numero es par
+
+5. console.log()
+Muestra el resultado en la consola
+
+Llamar a la funcion
+esParOImpar(4); //El numero es par
+esParOImpar(7); //El numero es impar
+
+Arrow Function aun mas corta
+
+Si la funcion es de una sola linea, se puede simplificar:
+
+const esParOImpar = numero =>
+    numero % 2 === 0
+    ? console.log("El numero es Par);
+    : console.log("El numero es Impar);
+
+Resumen rapido
+
+Son funciones modernas de JavaScript
+Se escribe con =>
+Reducen la cantidad de Codigo
+Son muy usadas en proyectos actuales
+
+Que son las funciones Regulares?
+
+Las funciones regulares (Tambien llamdas funciones tradicionales) son la forma clasica de declarar funciones
+en JavaSript.
+Se usan desde las primeras versiones del lenguaje y siguen siendo muy imporante hoy en dia.
+
+Se definen usando la palabra function.
+
+Sintaxis Basica
+
+function nombreDelaFuncion(parametro){
+    //Codigo que ejectura la funcion
+}
+
+Ejemplo explicado: Par o Impar (Funcionar Regular)
+
+function esParOImpar(numero){
+    if(numero % 2 === 0){
+        console.log("El numero es par");
+    } else {
+        console.log("El numero es impar");
+    }
+}
+
+Explicacion paso a paso
+
+1. function
+Palabra reservada para indicar que estamos creando una funcion regular.
+
+2. esParOImpar
+Es el nombre de la funcion, se usa para llamarla después.
+
+3. (numero)
+Parametro que recibe la funcion (el numero que vamos a evaluar)
+
+4. {...}
+Dentro van las instrucciones que se ejecutan cuando se llama la funcion.
+
+5. numero %2 === 0
+- Verifica si el numero es divisible entre 2.
+- Si el residuo es 0, es par.
+- Si no, es impar.
+
+6. console.log()
+Muestra el resultado en la consola
+
+
+Como llamar a la funcion
+
+esParOImpar(10); //El numero es par
+esParOImpar(9); //El numero es impar
+
+caracteristicas importante de las Funciones Regulares
+- Se pueden usar antes de ser declaradas (hoisting)
+- Tiene su propio contexto de this
+- Son ideales para funciones principales o reutilizables
+- Son más explicitass y faciles de entender para principiantes
+
+
+Comparacion Rapida
+
+Funcion Regular
+- Usa function
+- Tiene su propio this
+- Más larga
+- Existe desde siempre
+
+Arrow Function
+- Usa =>
+- No tiene this propio
+- Más corta 
+- Introducion en ES6
