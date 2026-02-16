@@ -1,0 +1,197 @@
+.contact-form-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
+}
+
+.toggle-form-button {
+  width: 100%;
+  background: linear-gradient(135deg, #4a90e2 0%, #2e5c8a 100%);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.toggle-form-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.5);
+  background: linear-gradient(135deg, #5a9ff2 0%, #3e6c9a 100%);
+}
+
+.toggle-form-button:active {
+  transform: translateY(0);
+}
+
+.contact-form {
+  background: linear-gradient(135deg, #1e2a3a 0%, #2a3f5f 100%);
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 20px;
+  border: 2px solid #4a90e2;
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.2);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-title {
+  color: #4a90e2;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 25px 0;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid rgba(74, 144, 226, 0.3);
+  border-radius: 8px;
+  background: rgba(15, 15, 30, 0.5);
+  color: white;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  background: rgba(15, 15, 30, 0.7);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.submit-button {
+  width: 100%;
+  background: linear-gradient(135deg, #34c759 0%, #248a3d 100%);
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(52, 199, 89, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 199, 89, 0.5);
+  background: linear-gradient(135deg, #44d769 0%, #349a4d 100%);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .contact-form-container {
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+
+  .toggle-form-button {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+
+  .contact-form {
+    padding: 25px;
+  }
+
+  .form-title {
+    font-size: 22px;
+  }
+
+  .form-group label {
+    font-size: 15px;
+  }
+
+  .form-group input {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+
+  .submit-button {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form-container {
+    padding: 0 10px;
+    margin-bottom: 25px;
+  }
+
+  .toggle-form-button {
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .form-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .submit-button {
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+}
