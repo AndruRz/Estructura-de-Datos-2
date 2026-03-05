@@ -87,8 +87,6 @@ function App() {
       <h1>Sistema de Movilidad Urbana - Hecho por André Rodriguez Pérez</h1>
 
       <div className="contenedor">
-
-        {/* Vehiculo destacado */}
         <div className="seccion-destacado">
           <h2>Vehiculo Destacado</h2>
           {destacado
@@ -100,7 +98,6 @@ function App() {
           }
         </div>
 
-        {/* Agregar vehiculo */}
         <div className="seccion">
           <h2>Agregar Vehiculo</h2>
           <div className="formulario">
@@ -112,7 +109,6 @@ function App() {
           </div>
         </div>
 
-        {/* Vehiculos disponibles */}
         <div className="seccion">
           <h2>Vehiculos Disponibles</h2>
           <div className="formulario">
@@ -131,7 +127,6 @@ function App() {
           </div>
         </div>
 
-        {/* Historial */}
         <div className="seccion">
           <h2>Historial de Alquileres</h2>
           {historial.length === 0
@@ -146,7 +141,6 @@ function App() {
           }
         </div>
 
-        {/* Inversionistas */}
         <div className="seccion">
           <h2>Inversionistas</h2>
           <div className="formulario">
