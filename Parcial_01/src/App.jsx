@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./App.css";
 import { ListaVehiculos } from "./estructuras/ListaVehiculos";
 import { ListaCircular } from "./estructuras/ListaCircular";
 import { ListaInversionistas } from "./estructuras/ListaInversionistas";
@@ -83,75 +84,90 @@ function App() {
 
   return (
     <div>
-      <h1>Sistema de Movilidad Urbana</h1>
-      <h2>Agregar Vehiculo</h2>
-      <input
-        placeholder="Marca"
-        value={nuevoVehiculo.marca}
-        onChange={e => setNuevoVehiculo({ ...nuevoVehiculo, marca: e.target.value })}
-      />
-      <input
-        placeholder="Modelo"
-        value={nuevoVehiculo.modelo}
-        onChange={e => setNuevoVehiculo({ ...nuevoVehiculo, modelo: e.target.value })}
-      />
-      <input
-        placeholder="Tipo"
-        value={nuevoVehiculo.tipo}
-        onChange={e => setNuevoVehiculo({ ...nuevoVehiculo, tipo: e.target.value })}
-      />
-      <input
-        placeholder="Placa"
-        value={nuevoVehiculo.placa}
-        onChange={e => setNuevoVehiculo({ ...nuevoVehiculo, placa: e.target.value })}
-      />
-      <button onClick={agregarVehiculo}>Agregar</button>
+      <h1>Sistema de Movilidad Urbana - Hecho por André Rodriguez Pérez</h1>
 
-      <h2>Vehiculos Disponibles</h2>
-      <input
-        placeholder="Nombre del cliente para alquilar"
-        value={clienteAlquiler}
-        onChange={e => setClienteAlquiler(e.target.value)}
-      />
-      {vehiculos.map(v => (
-        <div key={v.id}>
-          <span>{v.marca} {v.modelo} - {v.placa} - {v.tipo}</span>
-          <button onClick={() => alquilarVehiculo(v)}>Alquilar</button>
+      <div className="contenedor">
+
+        {/* Vehiculo destacado */}
+        <div className="seccion-destacado">
+          <h2>Vehiculo Destacado</h2>
+          {destacado
+            ? <>
+                <p className="destacado-nombre">{destacado.marca} {destacado.modelo}</p>
+                <p className="destacado-placa">{destacado.placa} — {destacado.tipo}</p>
+              </>
+            : <p className="vacio">Sin vehiculo destacado</p>
+          }
         </div>
-      ))}
 
-      <h2>Vehiculo Destacado</h2>
-      {destacado
-        ? <p>{destacado.marca} {destacado.modelo} - {destacado.placa}</p>
-        : <p>Sin vehiculo destacado</p>
-      }
-
-      <h2>Historial de Alquileres</h2>
-      {historial.map(r => (
-        <div key={r.id}>
-          <span>{r.marca} {r.modelo} - {r.placa} - Cliente: {r.cliente} - Fecha: {r.fecha}</span>
+        {/* Agregar vehiculo */}
+        <div className="seccion">
+          <h2>Agregar Vehiculo</h2>
+          <div className="formulario">
+            <input placeholder="Marca" value={nuevoVehiculo.marca} onChange={e => setNuevoVehiculo({ ...nuevoVehiculo, marca: e.target.value })} />
+            <input placeholder="Modelo" value={nuevoVehiculo.modelo} onChange={e => setNuevoVehiculo({ ...nuevoVehiculo, modelo: e.target.value })} />
+            <input placeholder="Tipo" value={nuevoVehiculo.tipo} onChange={e => setNuevoVehiculo({ ...nuevoVehiculo, tipo: e.target.value })} />
+            <input placeholder="Placa" value={nuevoVehiculo.placa} onChange={e => setNuevoVehiculo({ ...nuevoVehiculo, placa: e.target.value })} />
+            <button onClick={agregarVehiculo}>Agregar</button>
+          </div>
         </div>
-      ))}
 
-      <h2>Inversionistas</h2>
-      <input
-        placeholder="Nombre"
-        value={nuevoInversionista.nombre}
-        onChange={e => setNuevoInversionista({ ...nuevoInversionista, nombre: e.target.value })}
-      />
-      <input
-        placeholder="Monto"
-        value={nuevoInversionista.monto}
-        onChange={e => setNuevoInversionista({ ...nuevoInversionista, monto: e.target.value })}
-      />
-      <button onClick={agregarInversionista}>Agregar</button>
-      {inversionistas.map(inv => (
-        <div key={inv.id}>
-          <span>{inv.nombre} - ${inv.monto}</span>
-          <button onClick={() => eliminarInversionista(inv.id)}>Eliminar</button>
+        {/* Vehiculos disponibles */}
+        <div className="seccion">
+          <h2>Vehiculos Disponibles</h2>
+          <div className="formulario">
+            <input placeholder="Nombre del cliente" value={clienteAlquiler} onChange={e => setClienteAlquiler(e.target.value)} />
+          </div>
+          <div className="lista-items">
+            {vehiculos.length === 0
+              ? <p className="vacio">No hay vehiculos disponibles</p>
+              : vehiculos.map(v => (
+                  <div className="item" key={v.id}>
+                    <span>{v.marca} {v.modelo} — {v.placa}</span>
+                    <button onClick={() => alquilarVehiculo(v)}>Alquilar</button>
+                  </div>
+                ))
+            }
+          </div>
         </div>
-      ))}
 
+        {/* Historial */}
+        <div className="seccion">
+          <h2>Historial de Alquileres</h2>
+          {historial.length === 0
+            ? <p className="vacio">Sin alquileres registrados</p>
+            : historial.map(r => (
+                <div className="historial-item" key={r.id}>
+                  <p className="historial-cliente">{r.cliente}</p>
+                  <p>{r.marca} {r.modelo} — {r.placa}</p>
+                  <p className="historial-fecha">{r.fecha}</p>
+                </div>
+              ))
+          }
+        </div>
+
+        {/* Inversionistas */}
+        <div className="seccion">
+          <h2>Inversionistas</h2>
+          <div className="formulario">
+            <input placeholder="Nombre" value={nuevoInversionista.nombre} onChange={e => setNuevoInversionista({ ...nuevoInversionista, nombre: e.target.value })} />
+            <input placeholder="Monto" value={nuevoInversionista.monto} onChange={e => setNuevoInversionista({ ...nuevoInversionista, monto: e.target.value })} />
+            <button onClick={agregarInversionista}>Agregar</button>
+          </div>
+          <div className="lista-items">
+            {inversionistas.length === 0
+              ? <p className="vacio">Sin inversionistas registrados</p>
+              : inversionistas.map(inv => (
+                  <div className="item" key={inv.id}>
+                    <span>{inv.nombre} — ${inv.monto}</span>
+                    <button onClick={() => eliminarInversionista(inv.id)}>Eliminar</button>
+                  </div>
+                ))
+            }
+          </div>
+        </div>
+
+      </div>
     </div>
   );
 }

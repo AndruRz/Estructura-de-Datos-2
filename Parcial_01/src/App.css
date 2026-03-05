@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+
+h1 {
+  padding: 16px 24px;
+  background: #222;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.contenedor {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.seccion {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 16px;
+}
+
+.seccion-destacado {
+  grid-column: 1 / -1;
+  background: #222;
+  color: #fff;
+  padding: 16px;
+  text-align: center;
+}
+
+.seccion-destacado h2 {
+  color: #ccc;
+}
+
+.destacado-nombre {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.destacado-placa {
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.formulario input {
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.formulario button {
+  padding: 7px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.formulario button:hover {
+  background: #555;
+}
+
+.lista-items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  font-size: 13px;
+}
+
+.item span { flex: 1; }
+
+.item button {
+  padding: 4px 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: inherit;
+  margin-left: 8px;
+}
+
+.item button:hover { background: #c0392b; }
+
+.historial-item {
+  padding: 8px 10px;
+  border-left: 3px solid #555;
+  background: #f9f9f9;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.historial-cliente { font-weight: 600; }
+
+.historial-fecha {
+  color: #888;
+  font-size: 12px;
+}
+
+.vacio {
+  color: #aaa;
+  font-size: 13px;
+  font-style: italic;
+}
