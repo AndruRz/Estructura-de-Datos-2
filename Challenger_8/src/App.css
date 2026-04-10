@@ -1,0 +1,122 @@
+.app-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.app-title {
+  color: #1a202c;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  color: #2d3748;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 18px;
+  border-bottom: 2px solid #6c63ff;
+  padding-bottom: 8px;
+}
+
+.numbers-display {
+  color: #4a5568;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  background-color: #f7fafc;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left: 4px solid #6c63ff;
+}
+
+.traversal-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: #f7fafc;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: #4a5568;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.traversal-item strong {
+  color: #6c63ff;
+  min-width: 90px;
+  flex-shrink: 0;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  padding: 10px 14px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  width: 200px;
+}
+
+.search-input:focus {
+  border-color: #6c63ff;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #6c63ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.search-button:hover {
+  background-color: #5a52d5;
+}
+
+.search-result {
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+.search-result.found {
+  background-color: #f0fff4;
+  color: #276749;
+  border-left: 4px solid #48bb78;
+}
+
+.search-result.not-found {
+  background-color: #fff5f5;
+  color: #9b2c2c;
+  border-left: 4px solid #fc8181;
+}
+
+.visualizer-hint {
+  color: #718096;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
