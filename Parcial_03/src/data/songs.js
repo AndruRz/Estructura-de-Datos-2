@@ -1,0 +1,48 @@
+export const initialSongs = [
+  { title: "Lose Yourself",       artist: "Eminem", plays: 9800 },
+  { title: "Slim Shady",          artist: "Eminem", plays: 8700 },
+  { title: "Without Me",          artist: "Eminem", plays: 8400 },
+  { title: "Rap God",             artist: "Eminem", plays: 8100 },
+  { title: "Stan",                artist: "Eminem", plays: 7900 },
+  { title: "Not Afraid",          artist: "Eminem", plays: 7600 },
+  { title: "Mockingbird",         artist: "Eminem", plays: 7400 },
+  { title: "Eminem - Legacy",     artist: "Eminem", plays: 6900 },
+  { title: "River",               artist: "Eminem", plays: 6700 },
+  { title: "Beautiful",           artist: "Eminem", plays: 6500 },
+
+  { title: "La Mala",             artist: "Latin Mafia", plays: 7200 },
+  { title: "Clueless",            artist: "Latin Mafia", plays: 6800 },
+  { title: "Desahogo",            artist: "Latin Mafia", plays: 6400 },
+  { title: "No Me Llames",        artist: "Latin Mafia", plays: 6100 },
+  { title: "Mil Noches",          artist: "Latin Mafia", plays: 5900 },
+  { title: "Paranoia",            artist: "Latin Mafia", plays: 5700 },
+  { title: "Solo Yo",             artist: "Latin Mafia", plays: 5400 },
+  { title: "Contigo",             artist: "Latin Mafia", plays: 5100 },
+  { title: "Nublado",             artist: "Latin Mafia", plays: 4900 },
+  { title: "Tóxico",              artist: "Latin Mafia", plays: 4600 },
+];
+
+export const initialRelations = [
+  ["Lose Yourself",   "Rap God"],
+  ["Lose Yourself",   "Not Afraid"],
+  ["Slim Shady",      "Without Me"],
+  ["Slim Shady",      "Rap God"],
+  ["Without Me",      "Mockingbird"],
+  ["Stan",            "Beautiful"],
+  ["Stan",            "River"],
+  ["Not Afraid",      "Eminem - Legacy"],
+  ["River",           "Mockingbird"],
+
+  ["La Mala",         "Clueless"],
+  ["La Mala",         "No Me Llames"],
+  ["Clueless",        "Desahogo"],
+  ["Desahogo",        "Paranoia"],
+  ["Mil Noches",      "Contigo"],
+  ["Mil Noches",      "Nublado"],
+  ["Solo Yo",         "Tóxico"],
+  ["Solo Yo",         "No Me Llames"],
+  ["Paranoia",        "Nublado"],
+
+  ["Lose Yourself",   "La Mala"],
+  ["Rap God",         "Clueless"],
+];
